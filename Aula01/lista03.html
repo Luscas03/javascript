@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <p>3) As maçãs custam R$ 0,30 cada se forem compradas menos do que uma dúzia, e R$ 0,25 se forem  compradas pelo menos doze. Escreva um programa que leia o número de maçãs compradas, calcule e escreva o valor total da compra.</p>
+    <input type="number" id="quantidade" value="0">
+    <button onclick="precoMaca()">Enviar</button>
+   
+    <p id="saida"></p>
+<script>
+function precoMaca(){
+    var quantidade = 0;
+    var precopromo = "0,25";
+    var preconorm = "0,30";
+    var saida = document.getElementById("saida");
+    precopromo = parseFloat(precopromo.replace(',','.'));
+    preconorm = parseFloat(preconorm.replace(',','.'));
+quantidade = document.getElementById("quantidade");
+if(quantidade.value >=12) {
+    //alert(quantidade.value*precopromo);
+    //alert("Sua compra deu R$" + precopromo * quantidade.value + "!");
+    saida.innerHTML ="<b style='color:blue'>O valor é: " + precopromo * quantidade.value + "!";
+    
+}
+else { 
+   // alert("Sua compra deu R$" + preconorm * quantidade.value + "!");
+   saida.innerHTML = "<b style='color:red'>O valor é: " + preconorm * quantidade.value + "!";    
+}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="number" id="v1"> 
+   <input type="number" id="v2">
+   <input type="number" id="v3">  
+   <button type="button" onclick="">Ordernar</button>
+<script>
+    function ordenar(a , b , c) {
+        let texto = "";
+        let copo = 0;
+        if( a < b ) {
+            copo = a;
+            a = b;
+            b = copo;
+        }
+    if (c < b){
+        copo = c;
+        c = b;
+        b = copo;
+    }
+    saida("Em ordem crescente: " + a + "-" + b + "-" + c)
+    }
+</script>
+</body>
+</html>

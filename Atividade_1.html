@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule sua Média!</title>
+</head>
+<body>
+    <style>
+        fieldset {
+            background-color: #c4c2c2;
+        }
+        input {
+
+        }
+    </style>
+    <fieldset>
+        
+    <input type="number" id="nota1" placeholder="Primeira Nota" value="0" required>
+    <input type="number" id="nota2" placeholder="Segunda Nota" value="0" required>
+    <input type="number" id="nota3" placeholder="Avaliação Optativa" value="0" required>
+    <button onclick="resFinal()">Enviar</button>
+    <p id="saida"></p>
+</fieldset>
+    <script>
+function resFinal(){
+    let res1 = 0;
+    let res2 = 0;
+    let res3 = 0;
+    res1 = document.getElementById("nota1").value;
+    res2 = document.getElementById("nota2").value;
+    res3 = document.getElementById("nota3").value;
+var media = parseInt(res1) + parseInt(res2);
+var valorFinal = media / 2;
+
+
+ if (valorFinal >= 6) {
+   saida.innerHTML = "<b style='color:blue'>PARABÉNS! Você foi aprovado! Sua nota foi: "+ valorFinal + "!";
+ }
+
+}
+if(valorFinal <3){
+    saida.innerHTML = "<b style='color:red'>Você foi REPROVADO! Sua nota foi: "+ valorFinal + " Estude mais!";
+}
+
+
+}
+    </script>
+</body>
+</html> 

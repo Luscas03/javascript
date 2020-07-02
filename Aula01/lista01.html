@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<p>1) Escreva um programa para ler um valor e escrever se é positivo ou negativo. Considere o valor  zero como neutro, ou seja, se for digitado o valor zero, escrever a palavra zero.</p>
+<input type="number" name="valor" id="valor" value="0">
+<button onclick="verfNumero()">OK</button>
+<script>
+function verfNumero(){
+    var valor = 0;
+    valor = document.getElementById("valor");
+   if(valor.value > 0){
+        alert("Positivo");
+   }
+   else if (valor.value == 0){
+      alert("Neutro ou Zero");
+   }
+   else{
+    alert("Negativo");
+
+   
+   }
+}
+</script>
+
+</body>
+</html>
